@@ -22,6 +22,16 @@ body {
   margin: 0 auto;
 }
 
+.accordion:hover .header-2 {
+  color: var(--pink);
+  text-shadow: 2px 2px 0px var(--blue);
+}
+
+.accordion:hover .accordion__item {
+  background-color: var(--white);
+  border: 2px solid var(--light-purple);
+}
+
 .accordion__item {
   padding: 20px;
   margin-bottom: 5px;
