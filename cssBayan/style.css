@@ -1,0 +1,57 @@
+:root {
+  --blue: #748cc3;
+  --light-blue:#bbccef;
+  --pink: #f985a3;
+  --purple: #d1abe5;
+  --light-purple: #ead3f8;
+  --violet: #8a5c8c;
+  --dark-red: #5d2333;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--blue);
+}
+
+.accordion {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.accordion__item {
+  padding: 20px;
+  margin-bottom: 5px;
+  background-color: var(--light-purple);
+  border: 2px solid var(--white);
+  border-radius: 10px;
+}
+
+.header {
+  margin-top: 0;
+  font-family: 'Nanum Pen Script', cursive;
+  text-transform: uppercase;
+}
+
+.header-1 {
+  margin-top: 30px;
+  color: var(--white);
+}
+
+.header-2 {
+  color: var(--dark-red);
+}
+
+.comics__content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.comics__img {
+  width: 400px;
+  border-radius: 3px;
+}
