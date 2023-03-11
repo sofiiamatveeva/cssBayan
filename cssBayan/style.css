@@ -1,12 +1,18 @@
 :root {
+  /* Colors */
   --blue: #748cc3;
-  --light-blue:#bbccef;
   --pink: #f985a3;
-  --purple: #d1abe5;
   --light-purple: #ead3f8;
-  --violet: #8a5c8c;
   --dark-red: #5d2333;
   --white: #ffffff;
+
+  /* Resolution vars */
+  --mobile-width: 320px;
+  --mobile-height: 568px;
+  --tablet-width: 820px;
+  --tablet-height: 1180px;
+  --desktop-width: 1920;
+  --desktop-height: 1080px;
 }
 
 * {
@@ -22,14 +28,14 @@ body::-webkit-scrollbar {
 }
 
 .accordion {
-  width: 700px;
+  width: 90vw;
   margin: 0 auto;
 }
 
 .accordion:hover .header-2,
 .accordion:hover .fa {
   color: var(--pink);
-  text-shadow: 2px 2px 0px var(--blue);
+  text-shadow: 0.08em 0.08em 0 var(--blue);
 }
 
 .accordion:hover .accordion__item {
@@ -38,24 +44,26 @@ body::-webkit-scrollbar {
 }
 
 .accordion__item {
-  margin-bottom: 5px;
+  margin-bottom: 1%;
   background-color: var(--light-purple);
   border: 2px solid var(--white);
   border-radius: 10px;
 }
 
 .accordion__item:hover .comics__content {
-  height: 400px;
+  height: fit-content;
 }
 
 .header {
   margin-top: 0;
+  font-size: 1em;
   font-family: 'Nanum Pen Script', cursive;
   text-transform: uppercase;
 }
 
 .header-1 {
-  margin-top: 30px;
+  margin-top: 0.8em;
+  font-size: 1.4em;
   color: var(--white);
 }
 
@@ -67,8 +75,8 @@ body::-webkit-scrollbar {
 
 .icons-wrapper {
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 1em;
+  height: 1em;
 }
 
 .fa {
@@ -92,7 +100,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 20px 0 20px;
+  padding: 3% 3% 0 3%;
 }
 
 .comics__content {
@@ -100,14 +108,15 @@ body::-webkit-scrollbar {
   justify-content: center;
   width: 100%;
   height: 0;
-  padding: 0 20px 20px 20px;
+  padding: 0 3% 3% 3%;
   transition: 0.5s;
 }
 
 .comics__img {
-  width: 400px;
+  width: 80vw;
+  height: 0;
   border-radius: 3px;
-  margin-top: 20px;
+  margin-top: 5%;
 }
 
 .input {
@@ -115,7 +124,12 @@ body::-webkit-scrollbar {
 }
 
 .input:checked ~ label .comics__content {
-  height: 400px;
+  height: fit-content;
+  transition: 0.5s;
+}
+
+.input:checked ~ label .comics__content .comics__img {
+  height: 80vw !important;
 }
 
 .input:checked ~ label .comics__header .fa-plus {
