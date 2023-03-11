@@ -113,7 +113,7 @@ body::-webkit-scrollbar {
 }
 
 .comics__img {
-  width: 80vw;
+  width: 80%;
   height: 0;
   border-radius: 3px;
   margin-top: 5%;
@@ -129,7 +129,7 @@ body::-webkit-scrollbar {
 }
 
 .input:checked ~ label .comics__content .comics__img {
-  height: 80vw !important;
+  height: 80% !important;
 }
 
 .input:checked ~ label .comics__header .fa-plus {
@@ -138,4 +138,27 @@ body::-webkit-scrollbar {
 
 .input:checked ~ label .comics__header .fa-close {
   opacity: 1;
+}
+
+@media only screen and (min-width: 500px) {
+  .accordion {
+    width: 85vw;
+  }
+
+  .header {
+    font-size: 2.5em;
+  }
+  
+  .header-1 {
+    font-size: 3em;
+  }
+
+  .icons-wrapper {
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  .fa {
+    font-size: 2em !important;
+  }
 }
