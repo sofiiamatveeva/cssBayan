@@ -26,7 +26,8 @@ body::-webkit-scrollbar {
   margin: 0 auto;
 }
 
-.accordion:hover .header-2 {
+.accordion:hover .header-2,
+.accordion:hover .fa {
   color: var(--pink);
   text-shadow: 2px 2px 0px var(--blue);
 }
@@ -58,12 +59,39 @@ body::-webkit-scrollbar {
   color: var(--white);
 }
 
-.header-2 {
+.header-2,
+.fa {
   color: var(--dark-red);
   margin-bottom: 0;
 }
 
+.icons-wrapper {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.fa {
+  position: absolute;
+  transition: 0.5s;
+}
+
+.fa.fa-close {
+  opacity: 0;
+}
+
+.accordion__item:hover .fa.fa-plus {
+  opacity: 0;
+}
+
+.accordion__item:hover .fa.fa-close {
+  opacity: 1;
+}
+
 .comics__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px 20px 0 20px;
 }
 
@@ -79,6 +107,7 @@ body::-webkit-scrollbar {
 .comics__img {
   width: 400px;
   border-radius: 3px;
+  margin-top: 20px;
 }
 
 .input {
@@ -87,4 +116,12 @@ body::-webkit-scrollbar {
 
 .input:checked ~ label .comics__content {
   height: 400px;
+}
+
+.input:checked ~ label .comics__header .fa-plus {
+  opacity: 0;
+}
+
+.input:checked ~ label .comics__header .fa-close {
+  opacity: 1;
 }
