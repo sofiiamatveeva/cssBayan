@@ -67,13 +67,8 @@ body::-webkit-scrollbar {
   opacity: 0;
 }
 
-.fa.fa-close,
-.accordion__item:hover .fa.fa-plus {
+.fa.fa-close {
   opacity: 0;
-}
-
-.accordion__item:hover .fa.fa-close {
-  opacity: 1;
 }
 
 .comics__header {
@@ -99,38 +94,53 @@ body::-webkit-scrollbar {
   transition: 0.5s;
 }
 
-.accordion:hover .header-2,
-.accordion:hover .fa {
-  color: var(--pink);
-  text-shadow: 0.08em 0.08em 0 var(--blue);
-}
-
-.accordion:hover .accordion__item {
-  background-color: var(--white);
-  border: 2px solid var(--light-purple);
-}
-
-.accordion__item .comics__content .comics__img,
-.accordion__item:hover .comics__content .comics__img {
+.accordion__item .comics__content .comics__img {
   padding: 5% 0;
 }
 
-.accordion__item:hover .comics__content .comics__img,
-.accordion__item:hover .comics__content,
 .input:checked ~ label .comics__content,
 .input:checked ~ label .comics__content .comics__img {
   height: 75vw;
 }
 
-.accordion__item:hover .fa.fa-plus,
 .input:checked ~ label .comics__header .fa-plus {
   opacity: 0 !important;
 }
 
-.accordion__item:hover .fa.fa-close,
-.accordion:hover .input:checked ~ label .fa.fa-close,
-.accordion:hover .input:not(:checked) ~ label .fa.fa-plus {
-  opacity: 1;
+@media (hover: hover) {
+  .accordion:hover .header-2,
+  .accordion:hover .fa {
+    color: var(--pink);
+    text-shadow: 0.08em 0.08em 0 var(--blue);
+  }
+  
+  .accordion:hover .accordion__item {
+    background-color: var(--white);
+    border: 2px solid var(--light-purple);
+  }
+
+  label:hover {
+    cursor: pointer;
+  }
+
+  .accordion__item:hover .fa.fa-close,
+  .accordion:hover .input:checked ~ label .fa.fa-close,
+  .accordion:hover .input:not(:checked) ~ label .fa.fa-plus {
+    opacity: 1;
+  }
+
+  .accordion__item:hover .fa.fa-plus {
+    opacity: 0 !important;
+  }
+
+  .accordion__item:hover .comics__content .comics__img,
+  .accordion__item:hover .comics__content {
+    height: 75vw;
+  }
+
+  .accordion__item:hover .comics__content .comics__img {
+    padding: 5% 0;
+  }
 }
 
 @media only screen and (min-width: 500px) {
@@ -163,9 +173,14 @@ body::-webkit-scrollbar {
     font-size: 1.8em !important;
   }
 
-  .accordion__item .comics__content .comics__img,
-  .accordion__item:hover .comics__content .comics__img {
+  .accordion__item .comics__content .comics__img{
     padding: 3% 0;
+  }
+
+  @media (hover: hover) { 
+    .accordion__item:hover .comics__content .comics__img {
+      padding: 3% 0;
+    }
   }
 }
 
@@ -210,5 +225,12 @@ body::-webkit-scrollbar {
 
   .comics__content {
     padding: 0 1% 1% 1%;
+  }
+
+  @media (hover: hover) {
+    .accordion__item:hover .comics__content,
+    .accordion__item:hover .comics__content .comics__img {
+      height: 30vw !important;
+    }
   }
 }
