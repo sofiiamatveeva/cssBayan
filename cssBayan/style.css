@@ -64,6 +64,7 @@ body::-webkit-scrollbar {
 .fa {
   position: absolute;
   transition: 0.5s;
+  opacity: 0;
 }
 
 .fa.fa-close,
@@ -121,11 +122,14 @@ body::-webkit-scrollbar {
   height: 75vw;
 }
 
+.accordion__item:hover .fa.fa-plus,
 .input:checked ~ label .comics__header .fa-plus {
-  opacity: 0;
+  opacity: 0 !important;
 }
 
-.input:checked ~ label .comics__header .fa-close {
+.accordion__item:hover .fa.fa-close,
+.accordion:hover .input:checked ~ label .fa.fa-close,
+.accordion:hover .input:not(:checked) ~ label .fa.fa-plus {
   opacity: 1;
 }
 
